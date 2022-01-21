@@ -1,0 +1,9 @@
+{
+    "name": "KCStoat",
+    "version_number": "1.1.0",
+    "website_url": "https://github.com/Enovale/KCStoat",
+    "description": "Replaces the normal stoat you receive in Kaycee's Mod to the talking stoat from Act 1, with some tweaks to prevent issues",
+    "dependencies": [
+        "BepInEx-BepInExPack_Inscryption-5.4.1701"
+    ]
+}
