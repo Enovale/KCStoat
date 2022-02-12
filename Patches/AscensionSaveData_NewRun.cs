@@ -11,9 +11,9 @@ namespace KCStoat.Patches
     {
         public static void Postfix(List<CardInfo> starterDeck, AscensionSaveData __instance)
         {
-            var oldStoat = __instance.currentRun.playerDeck.Cards.First(c => c.name.Contains("Stoat"));
-            if (oldStoat != null)
+            if (__instance.currentRun.playerDeck.Cards.Exists(c => c.name.Contains("Stoat")))
             {
+                var oldStoat = __instance.currentRun.playerDeck.Cards.First(c => c.name.Contains("Stoat"));
                 var stoatIndex = __instance.currentRun.playerDeck.Cards.IndexOf(oldStoat);
                 __instance.currentRun.playerDeck.RemoveCard(oldStoat);
                 var newStoat = CardLoader.GetCardByName("Stoat_Talking");
